@@ -8,36 +8,71 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+        The ASL design repository
+        <span class="govuk-caption-xl"></span>
+      </h1>
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+       Some examples of design components used across the animals in science service.
       </p>
+      <h2 class="govuk-heading-m pattern-header">Status badges</h2>
+      <span class="govuk-hint">Highlights for the statuses of items in lists</span>
+        <p>
+          <span class="badge badge-complete">Complete</span>
+        </p>
+        <p>
+          <span class="badge">In progress</span>
+        </p>
+        <p>
+          <span class="badge badge-success">Success</span>
+        </p>
+        <p>
+          <span class="badge badge-warning">Warning</span>
+        </p>
+        <p>
+          <span class="badge badge-changed">Changed</span>
+        </p>
+        <p>
+          <span class="badge badge-comment">Comment</span>
+        </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      
+      <h2 class="govuk-heading-m pattern-header">Animal types picker</h2>
+      <span class="govuk-hint">Selecting not percisely known animal name entries from a long list</span>
+      {% include "includes/animal-types-picker.html" %}
+            
+      <h2 class="govuk-heading-m pattern-header">Previous/next page navigation</h2>
+      <span class="govuk-hint">Navigation for multi-page, sequential documents</span>
+      {% include "includes/application-footer-nav.html" %}
+            
+      <h2 class="govuk-heading-m pattern-header">Change comparison</h2>
+      <span class="govuk-hint">Flagging when an item has been changed and showing a comparison pop-up</span>
+      {% include "includes/change-comparison.html" %}
+      
+      <h2 class="govuk-heading-m pattern-header">Expandable satus banners</h2>
+      <span class="govuk-hint">Providing both high level and more detail warning messages</span>
+      {% include "includes/status-banner-draft-collapsed.html" %}
+      {% include "includes/status-banner-draft.html" %}
+      {% include "includes/status-banner-expired.html" %}
 
-      <h2 class="govuk-heading-m">About this page</h2>
+      <h2 class="govuk-heading-m pattern-header">Toaster message</h2>
+      <span class="govuk-hint">Providing additional awareness of auto-resolving changes on page load</span>
+      <p><a href="toaster-example">View an example</a></p>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
-          </a>
-        </li>
-      </ul>
+      <h2 class="govuk-heading-m pattern-header">Typeahead input</h2>
+      <span class="govuk-hint">Helping users select from a long list of known inputs, adapted from GOV.UK</span>
+      {% include "includes/typeahead.html" %}
+      
+      
+      <h2 class="govuk-heading-m pattern-header">Service phase banner</h2>
+      <span class="govuk-hint">Indicating the current phase of the service, adapted from GOV.UK design kit</span>
+      <div class="govuk-phase-banner-badge">
+        <div class="govuk-width-container">
+          <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag">beta</strong><span class="govuk-phase-banner__text">This is a new service – your <a href="/feedback" class="govuk-link">feedback</a> will help us to improve it.</span></p>
+        </div>
+      </div>
+      
     </div>
 </div>
 

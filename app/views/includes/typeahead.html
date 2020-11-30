@@ -1,0 +1,68 @@
+  <form autocomplete="off" action="#">
+    <div class="autocomplete">
+      <label for="myInput" class="govuk-label--s">Select EU country</label>
+      <span class="govuk-hint"></span>
+      <input id="myInput" type="text" name="myCountry" placeholder="France" class="govuk-input">
+    </div>
+    <!-- <input type="submit" class="govuk-button"> -->
+  </form>
+  
+  <script language="JavaScript" type="text/javascript" src="/public/javascripts/typeahead.js"></script>
+
+  <script>
+    /*An array containing all the country names in the world:*/
+    var inputValues = [
+    "Andorra",
+    "Albania",
+    "Austria",
+    "Åland Islands",
+    "Bosnia and Herzegovina",
+    "Belgium",
+    "Bulgaria",
+    "Belarus",
+    "Switzerland",
+    "Cyprus",
+    "Czech Republic",
+    "Germany",
+    "Denmark",
+    "Estonia",
+    "Spain",
+    "Finland",
+    "Faroe Islands",
+    "France",
+    "United Kingdon",
+    "Guernsey",
+    "Greece",
+    "Croatia",
+    "Hungary",
+    "Ireland",
+    "Isle of Man",
+    "Iceland",
+    "Italy",
+    "Jersey",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Latvia",
+    "Monaco",
+    "Moldova, Republic of",
+    "Macedonia, The Former Yugoslav Republic of",
+    "Malta",
+    "Netherlands",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Romania",
+    "Russian Federation",
+    "Sweden",
+    "Slovenia",
+    "Svalbard and Jan Mayen",
+    "Slovakia",
+    "San Marino",
+    "Ukraine"
+    ];
+
+    
+    /*initiate the autocomplete function on the "myInput" element, and pass along the inputValues array as possible autocomplete values:*/
+    autocomplete(document.getElementById("myInput"), inputValues);
+  </script>
